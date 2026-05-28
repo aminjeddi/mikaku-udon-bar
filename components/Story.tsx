@@ -62,13 +62,12 @@ export default function Story() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.3 }}
-          className="mt-20 sm:mt-24 pt-12 border-t border-ink/20 grid grid-cols-2 md:grid-cols-4 gap-10 sm:gap-8"
+          className="mt-20 sm:mt-24 pt-12 border-t border-ink/20 grid grid-cols-3 gap-10 sm:gap-8"
         >
           {[
             { k: "$3", v: "Starting Price" },
             { k: "10+", v: "Menu Favorites" },
             { k: "★ 4.5", v: "Google Rating" },
-            { k: "1k+", v: "Reviews" },
           ].map((s, i) => (
             <motion.div
               key={s.v}
