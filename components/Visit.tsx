@@ -35,7 +35,7 @@ const locations = [
 
 export default function Visit() {
   return (
-    <section id="visit" className="px-6 py-28 lg:py-40 border-t border-ink/15">
+    <section id="visit" className="px-5 sm:px-6 py-20 sm:py-28 lg:py-40 border-t border-ink/15">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -45,7 +45,7 @@ export default function Visit() {
           className="text-center"
         >
           <p className="label text-ink/50 mb-5">— Visit</p>
-          <h2 className="serif text-5xl md:text-7xl">A Bowl is Waiting</h2>
+          <h2 className="serif text-4xl sm:text-5xl md:text-7xl">A Bowl is Waiting</h2>
           <p className="serif italic text-ink/65 mt-6 text-lg max-w-xl mx-auto">
             Two rooms, the same noodles. Walk-ins welcome; reservations honored.
           </p>
@@ -63,7 +63,7 @@ export default function Visit() {
               className="text-center"
             >
               <p className="label text-accent mb-4">Location 0{i + 1}</p>
-              <h3 className="serif text-4xl md:text-5xl">{loc.name}</h3>
+              <h3 className="serif text-3xl sm:text-4xl md:text-5xl">{loc.name}</h3>
 
               <div className="mt-6 space-y-1 serif text-xl text-ink/85">
                 {loc.address.map((l) => (
@@ -131,12 +131,12 @@ export default function Visit() {
             {hours.map((h) => (
               <div
                 key={h.day}
-                className={`flex items-baseline justify-between py-4 ${
+                className={`flex items-baseline justify-between gap-3 py-4 ${
                   h.time === "Closed" ? "text-ink/45" : ""
                 }`}
               >
-                <span className="serif text-xl">{h.day}</span>
-                <span className="serif italic text-lg">{h.time}</span>
+                <span className="serif text-lg sm:text-xl">{h.day}</span>
+                <span className="serif italic text-sm sm:text-lg text-right">{h.time}</span>
               </div>
             ))}
           </div>

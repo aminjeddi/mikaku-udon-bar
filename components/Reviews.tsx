@@ -13,25 +13,25 @@ const reviews = [
 
 export default function Reviews() {
   return (
-    <section id="reviews" className="px-6 py-28 lg:py-40 border-t border-ink/15">
+    <section id="reviews" className="px-5 sm:px-6 py-20 sm:py-28 lg:py-40 border-t border-ink/15">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.9 }}
-          className="text-center mb-20"
+          className="text-center mb-16 sm:mb-20"
         >
           <p className="label text-ink/50 mb-5">— Kind Words</p>
-          <h2 className="serif text-5xl md:text-6xl">From the Counter</h2>
-          <div className="mt-8 inline-flex items-center gap-4">
+          <h2 className="serif text-4xl sm:text-5xl md:text-6xl">From the Counter</h2>
+          <div className="mt-6 sm:mt-8 inline-flex flex-wrap items-center justify-center gap-3 sm:gap-4">
             <span className="serif italic text-3xl text-accent">4.8</span>
             <span className="text-accent tracking-widest">★★★★★</span>
             <span className="label text-ink/50">Google · 1.2k reviews</span>
           </div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-14">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12 sm:gap-y-14">
           {reviews.map((r, i) => (
             <motion.figure
               key={i}
@@ -42,7 +42,7 @@ export default function Reviews() {
               className="text-center max-w-sm mx-auto"
             >
               <div className="serif text-6xl text-accent leading-none mb-4">&ldquo;</div>
-              <blockquote className="serif italic text-xl leading-relaxed text-ink/85">
+              <blockquote className="serif italic text-lg sm:text-xl leading-relaxed text-ink/85">
                 {r.quote}
               </blockquote>
               <figcaption className="mt-6">

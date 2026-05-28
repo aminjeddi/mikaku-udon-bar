@@ -13,6 +13,7 @@ html, body {
   color: #0A0A0A;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
 html { scroll-behavior: smooth; }

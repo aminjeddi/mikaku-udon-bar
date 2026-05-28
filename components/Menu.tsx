@@ -165,7 +165,7 @@ function TagPill({ tag }: { tag: NonNullable<Item["tags"]>[number] }) {
 
 export default function Menu() {
   return (
-    <section id="menu" className="px-6 py-28 lg:py-40">
+    <section id="menu" className="px-5 sm:px-6 py-20 sm:py-28 lg:py-40">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -175,7 +175,7 @@ export default function Menu() {
           className="text-center"
         >
           <p className="label text-ink/50 mb-5">— The Menu</p>
-          <h2 className="serif text-5xl md:text-6xl">A Short, Honest Menu</h2>
+          <h2 className="serif text-4xl sm:text-5xl md:text-6xl">A Short, Honest Menu</h2>
           <p className="serif italic text-ink/65 mt-6 text-lg max-w-xl mx-auto leading-relaxed">
             Hand-pulled noodles, signature sauces, and Mikaku originals. If you
             have an allergy or special request, please let your server know.
@@ -200,14 +200,14 @@ export default function Menu() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.7 }}
-                className="flex items-center justify-center gap-6 mb-14"
+                className="flex items-center justify-center gap-3 sm:gap-6 mb-10 sm:mb-14"
               >
-                <div className="hairline flex-1 max-w-[120px]" />
+                <div className="hairline flex-1 max-w-[60px] sm:max-w-[120px]" />
                 <span className="label text-ink/60">0{si + 1}</span>
-                <h3 className="serif text-3xl md:text-4xl italic whitespace-nowrap">
+                <h3 className="serif text-2xl sm:text-3xl md:text-4xl italic whitespace-nowrap">
                   {sec.name}
                 </h3>
-                <div className="hairline flex-1 max-w-[120px]" />
+                <div className="hairline flex-1 max-w-[60px] sm:max-w-[120px]" />
               </motion.div>
 
               <div className="space-y-8">
@@ -220,18 +220,18 @@ export default function Menu() {
                     transition={{ duration: 0.5, delay: i * 0.04 }}
                     className="group"
                   >
-                    <div className="flex items-baseline gap-4">
-                      <h4 className="serif text-2xl md:text-3xl text-ink group-hover:text-accent transition-colors">
+                    <div className="flex items-baseline gap-3 sm:gap-4 flex-wrap">
+                      <h4 className="serif text-xl sm:text-2xl md:text-3xl text-ink group-hover:text-accent transition-colors flex-1 min-w-0">
                         {item.name}
                         {item.tags?.map((t) => (
                           <TagPill key={t} tag={t} />
                         ))}
                       </h4>
-                      <div className="flex-1 border-b border-dotted border-ink/30 translate-y-[-6px]" />
-                      <span className="serif text-2xl text-ink/85">${item.price}</span>
+                      <div className="hidden sm:block flex-1 border-b border-dotted border-ink/30 translate-y-[-6px]" />
+                      <span className="serif text-xl sm:text-2xl text-ink/85">${item.price}</span>
                     </div>
                     <div className="mt-2 flex items-baseline gap-4 flex-wrap">
-                      <p className="text-ink/65 leading-relaxed serif italic max-w-2xl flex-1 min-w-[260px]">
+                      <p className="text-sm sm:text-base text-ink/65 leading-relaxed serif italic max-w-2xl flex-1 min-w-[200px]">
                         {item.desc}
                       </p>
                       {item.rating && (
@@ -253,23 +253,23 @@ export default function Menu() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.7 }}
-              className="flex items-center justify-center gap-6 mb-14"
+              className="flex items-center justify-center gap-3 sm:gap-6 mb-10 sm:mb-14"
             >
-              <div className="hairline flex-1 max-w-[120px]" />
+              <div className="hairline flex-1 max-w-[60px] sm:max-w-[120px]" />
               <span className="label text-ink/60">03</span>
-              <h3 className="serif text-3xl md:text-4xl italic">Drink</h3>
-              <div className="hairline flex-1 max-w-[120px]" />
+              <h3 className="serif text-2xl sm:text-3xl md:text-4xl italic">Drink</h3>
+              <div className="hairline flex-1 max-w-[60px] sm:max-w-[120px]" />
             </motion.div>
 
             <div className="space-y-8">
               {drinks.map((item) => (
                 <div key={item.name}>
-                  <div className="flex items-baseline gap-4">
-                    <h4 className="serif text-2xl md:text-3xl text-ink">{item.name}</h4>
-                    <div className="flex-1 border-b border-dotted border-ink/30 translate-y-[-6px]" />
-                    <span className="serif text-2xl text-ink/85">${item.price}</span>
+                  <div className="flex items-baseline gap-3 sm:gap-4 flex-wrap">
+                    <h4 className="serif text-xl sm:text-2xl md:text-3xl text-ink flex-1 min-w-0">{item.name}</h4>
+                    <div className="hidden sm:block flex-1 border-b border-dotted border-ink/30 translate-y-[-6px]" />
+                    <span className="serif text-xl sm:text-2xl text-ink/85">${item.price}</span>
                   </div>
-                  <p className="mt-2 text-ink/65 serif italic">{item.desc}</p>
+                  <p className="mt-2 text-sm sm:text-base text-ink/65 serif italic">{item.desc}</p>
                 </div>
               ))}
             </div>

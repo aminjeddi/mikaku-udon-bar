@@ -18,9 +18,9 @@ export default function Nav() {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-      className="pt-10 pb-4"
+      className="pt-8 sm:pt-10 pb-4"
     >
-      <nav className="hidden md:flex items-center justify-center gap-14 serif text-2xl">
+      <nav className="hidden md:flex items-center justify-center gap-10 lg:gap-14 serif text-xl lg:text-2xl">
         {links.map((l) => (
           <a
             key={l.href}
