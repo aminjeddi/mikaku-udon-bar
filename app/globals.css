@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Archivo Black", Impact, sans-serif;
+  --font-serif: "Cormorant Garamond", "Tiempos Text", Georgia, serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+html, body {
+  background: #EFEBE2;
+  color: #0A0A0A;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+html { scroll-behavior: smooth; }
+
+::selection { background: #0A0A0A; color: #EFEBE2; }
+
+.huge {
+  font-family: var(--font-display);
+  letter-spacing: -0.045em;
+  line-height: 0.82;
+}
+
+.serif { font-family: var(--font-serif); }
+
+.label {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.hairline { height: 1px; background: rgba(10,10,10,0.18); }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track { animation: marquee 45s linear infinite; }
+
+@keyframes drift {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+}
+.drift { animation: drift 8s ease-in-out infinite; }
